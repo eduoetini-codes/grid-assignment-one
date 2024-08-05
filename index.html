@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .body{
+            height: 100px ;
+            align-items: center;
+        }
+        .parent{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr ;
+            grid-row: 1fr 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows:  1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .parent div {
+            background-color: aqua;
+            font-size: 40px;
+            height: 170px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            border-radius: 10px;
+            /* color: white; */
+        }
+        .parent div:nth-child(1){
+            background-color: #B7FD47;
+            height: unset;
+            grid-row:1/4;
+            /* grid-column: 1/4; */
+        }
+        .parent div:nth-child(2){
+            background-color: #47F1FD;
+            grid-column: 2/4;
+            /* height: unset; */
+        }
+        .parent div:nth-child(3){
+            background-color: #5A680B;
+            grid-column: 4/6;
+        }
+        .parent div:nth-child(4){
+            background-color: #F30B1E;
+            /* width: 50%; */
+        }
+        .parent div:nth-child(5){
+            background-color: #47FD93;
+            grid-column: 3/5;
+        }
+        .parent div:nth-child(6){
+            background-color: #054558;
+            height: unset;
+            grid-row: 2/4;
+            grid-column: 5/6;
+        }
+        .parent div:nth-child(7){
+            background-color: #47ABFD;
+            grid-column: 2/4;
+        }
+        .parent div:nth-child(8){
+            background-color: #FD47CF;
+        }
+        .parent div:nth-child(9){
+            background-color: #FD7B47;
+            grid-column: 1/6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Testing</h1>
+    <div class="parent">
+        <div>3</div>
+        <div>6</div>
+        <div>7</div>
+        <div>9</div>
+        <div>2</div>
+        <div>8</div>
+        <div>4</div>
+        <div>5</div>
+        <div>1</div>
+    </div>
+</body>
 </body>
 </html>
